@@ -55,6 +55,7 @@ class _DoubleTapIconState extends State<DoubleTapIcon>
 
   @override
   void dispose() {
+    Get.lazyPut(()=>PodGetXVideoController())
     final podCtr = Get.find<PodGetXVideoController>(tag: widget.tag);
 
     if (widget.iconOnly && !widget.isForward) {
